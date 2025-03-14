@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "BASE URL setup completed in SharedUtilities."
+git commit -m "Axios installed, AxiosSecure and AxiosPublic custom hooks created."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
