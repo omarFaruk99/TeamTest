@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "AuthProvider added and configured properly."
+git commit -m "TanstackQuery installed and configured properly."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
