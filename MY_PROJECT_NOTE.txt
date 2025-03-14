@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "Project setup completed using Vite, React, TailwindCSS and ReactRouter."
+git commit -m "Firebase installed and configured."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ git push origin newBranchName02
 // Instructions for team members.---------------------------------------------------------------------------------------
 
 Login to your own GitHub profile.
-Visit this project repository [https://github.com/MZahidKamal/Gadgets-Rental---Client-Side.git].
+Visit this project repository [https://github.com/MZahidKamal/GadgetSwap-Rental-Marketplace--Client-Side.git].
 Click 'Fork' just above the About section.
 Keep everything same, and then click 'Create fork' button in the bottom right corner.
 Now you will see a copy of this project into your own GitHub profile.
@@ -49,20 +49,3 @@ Now got to your forked repository,
 
 // Firebase setup ------------------------------------------------------------------------------------------------------
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAzrwIyDKcbAxC_e1wNyQuZkwu8ZzrHgJ4",
-  authDomain: "gadgetswap-rental-market-d3ab2.firebaseapp.com",
-  projectId: "gadgetswap-rental-market-d3ab2",
-  storageBucket: "gadgetswap-rental-market-d3ab2.firebasestorage.app",
-  messagingSenderId: "335988073552",
-  appId: "1:335988073552:web:9257b17e20a7edec385d55"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
