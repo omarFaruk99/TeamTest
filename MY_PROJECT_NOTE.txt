@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "The _redirects file added into the public folder."
+git commit -m "NavbarComponent design prototype is completed."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
