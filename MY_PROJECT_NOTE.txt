@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "Firebase installed and configured."
+git commit -m "BASE URL setup completed in SharedUtilities."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
