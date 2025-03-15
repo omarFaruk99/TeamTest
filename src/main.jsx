@@ -9,6 +9,7 @@ import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
 import SignInPage from "./Pages/SignInPage/SignInPage.jsx";
 import AuthProvider from "./Providers/AuthProvider.jsx";
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import Error404 from "./Pages/Error404Page/Error404Page.jsx";
 
 
 const queryClient = new QueryClient()
@@ -29,6 +30,7 @@ ReactDOM.createRoot(root).render(
                             <Route path={'/sign-up'} element={<SignUpPage></SignUpPage>}></Route>
                             <Route path={'/sign-in'} element={<SignInPage></SignInPage>}></Route>
                         </Route>
+                        <Route path={'*'} element={<Error404></Error404>}></Route>
                     </Routes>
                 </QueryClientProvider>
             </AuthProvider>
