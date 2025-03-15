@@ -20,20 +20,25 @@ import {
     IoSparkles
 } from 'react-icons/io5';
 
+
 const BannerComponent = () => {
-    const [darkMode, setDarkMode] = useState(false);
+
+    const [darkMode, setDarkMode] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeGadget, setActiveGadget] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
+
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
     };
 
+
     const handleSearchSubmit = (e) => {
         e.preventDefault();
         console.log('Searching for:', searchQuery);
     };
+
 
     // Auto-rotate featured gadgets
     useEffect(() => {
@@ -45,14 +50,17 @@ const BannerComponent = () => {
         }
     }, [isHovering]);
 
+
     const handleGadgetHover = (index) => {
         setActiveGadget(index);
         setIsHovering(true);
     };
 
+
     const handleGadgetLeave = () => {
         setIsHovering(false);
     };
+
 
     const categories = [
         { name: 'Smartphones', icon: <FiSmartphone size={20} /> },
@@ -64,6 +72,7 @@ const BannerComponent = () => {
         { name: 'VR', icon: <FiMonitor size={20} /> },
         { name: 'Drones', icon: <FiWifi size={20} /> },
     ];
+
 
     const featuredGadgets = [
         {
@@ -102,6 +111,7 @@ const BannerComponent = () => {
             color: "from-white to-gray-200"
         }
     ];
+
 
     return (
         <div className={`w-full overflow-hidden transition-all duration-300 ${

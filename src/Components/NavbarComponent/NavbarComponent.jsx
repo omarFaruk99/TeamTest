@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const NavbarComponent = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
 
     // Sample user data - in a real app, this would come from auth context or props
@@ -42,13 +42,16 @@ const NavbarComponent = () => {
 
     const navButtons = [
         {name: 'Home', path: '/'},
+        {name: 'Our Services', path: '/our-services', hideWhenLoggedIn: false},
+        {name: 'Contact Us', path: '/contact-us', hideWhenLoggedIn: false},
+        {name: 'FAQ', path: '/faq', hideWhenLoggedIn: false},
         {name: 'Sign Up', path: '/sign-up', hideWhenLoggedIn: true},
         {name: 'Sign In', path: '/sign-in', hideWhenLoggedIn: true},
     ];
 
 
     return (
-        <nav className={`w-full border-b backdrop-blur-md transition-all duration-300 ${
+        <nav className={`w-full backdrop-blur-md transition-all duration-300 ${
             darkMode
                 ? 'bg-gray-900/90 border-purple-900/30 text-white'
                 : 'bg-white/80 border-indigo-200/30 text-gray-800'

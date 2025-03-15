@@ -4,15 +4,14 @@ import FooterComponent from "../Components/FooterComponent/FooterComponent.jsx";
 import {Outlet} from "react-router";
 import {ToastContainer} from "react-toastify";
 
+
 const MainLayout = () => {
     return (
-        <div className={'container mx-auto min-h-screen flex flex-col'}>
+        <div>
 
             <NavbarComponent></NavbarComponent>
 
-            <div className={'flex-grow'}>
-                <Outlet></Outlet>
-            </div>
+            <Outlet></Outlet>
 
             <FooterComponent></FooterComponent>
 

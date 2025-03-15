@@ -6,7 +6,7 @@ import {IoLogoYoutube} from 'react-icons/io5';
 
 const FooterComponent = () => {
 
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     const [email, setEmail] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
 
