@@ -200,7 +200,7 @@ const SignUpComponent = () => {
 
     return (
         <div
-            className={`min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+            className={`min-h-[calc(100vh-557px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
                 darkMode ? 'bg-gray-900' : 'bg-gray-50'
             }`}>
             <div className={`max-w-xl w-full space-y-8 relative ${
@@ -224,7 +224,7 @@ const SignUpComponent = () => {
                     <p className={`mt-2 text-sm ${
                         darkMode ? 'text-gray-300' : 'text-gray-600'
                     } transition-colors duration-300`}>
-                        Join GadgetSwap and start renting or lending gadgets today
+                        Join GadgetSwap and start renting gadgets today
                     </p>
                 </div>
 
@@ -462,7 +462,7 @@ const SignUpComponent = () => {
                     <div>
                         <button
                             type="submit"
-                            className={`group relative w-full flex justify-center py-3 px-4 border border-transparent rounded-lg text-sm font-medium text-white ${
+                            className={`group relative w-full flex justify-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-white ${
                                 darkMode
                                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
                                     : 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700'
@@ -498,7 +498,7 @@ const SignUpComponent = () => {
                         <button
                             type="button"
                             onClick={handleGoogleSignIn}
-                            className={`group relative w-full flex justify-center py-3 px-4 border ${
+                            className={`group relative w-full flex justify-center py-2 px-4 border ${
                                 darkMode
                                     ? 'border-gray-600 bg-gray-700/50 text-white hover:bg-gray-600/50'
                                     : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
