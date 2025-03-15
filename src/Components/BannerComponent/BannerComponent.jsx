@@ -119,8 +119,10 @@ const BannerComponent = () => {
                 ? 'bg-gray-900 text-white'
                 : 'bg-white text-gray-900'
         }`}>
+
             {/* Hero Section with 3D-like elements */}
             <div className="relative">
+
                 {/* Background Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 blur-3xl"></div>
@@ -140,11 +142,13 @@ const BannerComponent = () => {
                 </div>
 
                 <div className="container mx-auto px-4 py-12 md:py-24">
+
                     {/* Main Content */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+
                         {/* Left Content - 5 columns */}
                         <div className="lg:col-span-5 space-y-8">
-                            <div className="space-y-4">
+                            <div className="space-y-10">
                                 <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium mb-2 ${
                                     darkMode
                                         ? 'bg-purple-900/40 text-purple-300 border border-purple-800/50'
@@ -159,21 +163,22 @@ const BannerComponent = () => {
                                         ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400'
                                         : 'text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600'
                                 }`}>
-                                    Tech On Demand.<br />
+                                    Tech On Demand.<br/>
                                     <span className={`relative inline-block ${
                                         darkMode ? 'text-white' : 'text-gray-900'
                                     }`}>
-                    Without The{' '}
-                                        <span className="relative">
-                      Commitment
-                      <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 15" preserveAspectRatio="none" height="15">
-                        <path
-                            d="M0,5 Q40,0 50,5 Q60,10 100,5 L100,15 L0,15 Z"
-                            fill={darkMode ? 'rgba(147, 51, 234, 0.3)' : 'rgba(79, 70, 229, 0.2)'}
-                        />
-                      </svg>
-                    </span>
-                  </span>
+                                    Without The{' '}
+                                    <span className="relative">
+                                        Commitment
+                                        <svg className="absolute -bottom-5 left-0 w-full" viewBox="0 0 100 15"
+                                           preserveAspectRatio="none" height="15">
+                                        <path
+                                            d="M0,5 Q40,0 50,5 Q60,10 100,5 L100,15 L0,15 Z"
+                                            fill={darkMode ? 'rgba(147, 51, 234, 0.3)' : 'rgba(79, 70, 229, 0.2)'}
+                                        />
+                                        </svg>
+                                    </span>
+                                  </span>
                                 </h1>
 
                                 <p className={`text-lg md:text-xl max-w-md ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -182,7 +187,7 @@ const BannerComponent = () => {
                             </div>
 
                             {/* Search Bar with Floating Labels */}
-                            <div className={`relative max-w-md transition-all duration-300 transform hover:scale-[1.02] ${
+                            <div className={`h-24 relative max-w-md transition-all duration-300 transform hover:scale-[1.02] ${
                                 darkMode
                                     ? 'bg-gray-800/70 rounded-2xl border border-purple-900/30 shadow-lg shadow-purple-900/10'
                                     : 'bg-white rounded-2xl border border-indigo-200/50 shadow-lg shadow-indigo-600/5'
@@ -213,7 +218,7 @@ const BannerComponent = () => {
                                 </form>
 
                                 {/* Floating Search Suggestions */}
-                                <div className={`absolute -bottom-3 left-6 right-6 flex space-x-2 overflow-x-auto pb-3 no-scrollbar`}>
+                                <div className={`absolute bottom-0 left-4 right-6 flex space-x-2 overflow-x-auto pb-3 no-scrollbar`}>
                                     {['iPhone', 'Drone', 'Camera', 'MacBook', 'VR Headset'].map((term, idx) => (
                                         <button
                                             key={idx}
@@ -234,19 +239,19 @@ const BannerComponent = () => {
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     to="/rent"
-                                    className={`group relative px-6 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden ${
+                                    className={`group w-6/12 relative px-6 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden ${
                                         darkMode
                                             ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-900/20'
                                             : 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:shadow-lg hover:shadow-indigo-600/20'
                                     }`}
                                 >
-                  <span className="relative z-10 flex items-center">
-                    Rent a Gadget <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                                    <span className="relative z-10 flex items-center">
+                                        Rent a Gadget <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                                    </span>
                                     <span className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 bg-gradient-to-r from-pink-600 to-purple-600"></span>
                                 </Link>
 
-                                <Link
+                                {/*<Link
                                     to="/lend"
                                     className={`group relative px-6 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden ${
                                         darkMode
@@ -254,13 +259,13 @@ const BannerComponent = () => {
                                             : 'bg-white text-indigo-600 border border-indigo-200/50'
                                     }`}
                                 >
-                  <span className="relative z-10 flex items-center">
-                    Lend Your Gadget <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                                    <span className="relative z-10 flex items-center">
+                                        Lend Your Gadget <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                                    </span>
                                     <span className={`absolute inset-0 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ${
                                         darkMode ? 'bg-purple-900/40' : 'bg-indigo-50/80'
                                     }`}></span>
-                                </Link>
+                                </Link>*/}
                             </div>
 
                             {/* Trust Indicators */}
@@ -293,6 +298,7 @@ const BannerComponent = () => {
 
                         {/* Right Content - 7 columns with 3D Gadget Showcase */}
                         <div className="lg:col-span-7 relative">
+
                             {/* 3D-like Rotating Gadget Display */}
                             <div className="relative h-[500px] perspective-1000">
                                 <div className={`absolute inset-0 rounded-3xl overflow-hidden ${
@@ -300,6 +306,7 @@ const BannerComponent = () => {
                                         ? 'bg-gradient-to-br from-gray-800/50 to-purple-900/30 border border-purple-900/30'
                                         : 'bg-gradient-to-br from-white/50 to-indigo-100/30 border border-indigo-200/30'
                                 } backdrop-blur-md shadow-xl`}>
+
                                     {/* Decorative Elements */}
                                     <div className="absolute top-0 left-0 w-full h-full">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-full blur-2xl"></div>
@@ -318,6 +325,7 @@ const BannerComponent = () => {
                                                 }`}
                                             >
                                                 <div className="relative w-full h-full">
+
                                                     {/* Gadget Image */}
                                                     <div className="absolute inset-0 overflow-hidden">
                                                         <img
@@ -397,9 +405,9 @@ const BannerComponent = () => {
                                             : 'bg-gray-100/70 text-gray-800 hover:bg-indigo-100/70'
                                     }`}
                                 >
-                                  <span className={`mr-2 ${
-                                      darkMode ? 'text-purple-400' : 'text-indigo-600'
-                                  }`}>{category.icon}</span>
+                                    <span className={`mr-2 ${
+                                        darkMode ? 'text-purple-400' : 'text-indigo-600'
+                                    }`}>{category.icon}</span>
                                     <span className="text-sm font-medium">{category.name}</span>
                                 </Link>
                             ))}
