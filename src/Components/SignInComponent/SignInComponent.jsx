@@ -8,7 +8,7 @@ import { IoWarningOutline } from 'react-icons/io5';
 const SignInComponent = () => {
 
     const navigate = useNavigate();
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
 
     // Form state

@@ -81,7 +81,7 @@ const FooterComponent = () => {
 
 
     return (
-        <footer className={`w-full mt-16 border-t backdrop-blur-md transition-all duration-300 ${
+        <footer className={`w-full border-t backdrop-blur-md transition-all duration-300 ${
             darkMode
                 ? 'bg-gray-900/90 border-purple-900/30 text-white'
                 : 'bg-white/80 border-indigo-200/30 text-gray-800'

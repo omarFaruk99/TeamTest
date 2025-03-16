@@ -8,7 +8,7 @@ import {IoWarningOutline} from 'react-icons/io5';
 const SignUpComponent = () => {
 
     const navigate = useNavigate();
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
 
     // Form state
@@ -262,7 +262,7 @@ const SignUpComponent = () => {
                                             ? 'focus:ring-purple-500/50 focus:border-purple-500'
                                             : 'focus:ring-indigo-500/50 focus:border-indigo-500'
                                     } transition-colors duration-300`}
-                                    placeholder="John Doe"
+                                    placeholder="Your Full Name"
                                 />
                             </div>
                             {errors.fullName && touched.fullName && (

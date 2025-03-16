@@ -11,7 +11,7 @@ const NavbarComponent = () => {
 
     // Sample user data - in a real app, this would come from auth context or props
     const user = {
-        isLoggedIn: false,
+        isLoggedIn: true,
         name: "John Doe",
         email: "john@example.com",
         profilePicture: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -42,7 +42,8 @@ const NavbarComponent = () => {
 
     const navButtons = [
         {name: 'Home', path: '/'},
-        {name: 'Our Services', path: '/our-services', hideWhenLoggedIn: false},
+        {name: 'Gadgets', path: '/all-gadgets', hideWhenLoggedIn: false},
+        {name: 'How It Works', path: '/how-it-works', hideWhenLoggedIn: false},
         {name: 'Contact Us', path: '/contact-us', hideWhenLoggedIn: false},
         {name: 'FAQ', path: '/faq', hideWhenLoggedIn: false},
         {name: 'Sign Up', path: '/sign-up', hideWhenLoggedIn: true},
