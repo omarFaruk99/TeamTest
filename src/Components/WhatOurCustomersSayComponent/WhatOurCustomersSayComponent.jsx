@@ -198,12 +198,12 @@ const WhatOurCustomersSayComponent = () => {
 
                 {/* Testimonials Carousel */}
                 <div
-                    className="max-w-5xl mx-auto"
+                    className="max-w-6xl mx-auto"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
                     {/* Main Testimonial Card */}
-                    <div className={`relative rounded-2xl overflow-hidden transition-all duration-500 ${
+                    <div className={`px-5 relative rounded-2xl overflow-hidden transition-all duration-500 ${
                         darkMode
                             ? 'bg-gray-800/50 backdrop-blur-md border border-gray-700/50'
                             : 'bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-xl'

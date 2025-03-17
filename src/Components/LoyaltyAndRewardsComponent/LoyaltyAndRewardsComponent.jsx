@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     FiAward,
     FiChevronRight,
@@ -50,170 +50,174 @@ const LoyaltyAndRewardsComponent = () => {
         };
     }, []);
 
+
     // Loyalty tiers data
     const loyaltyTiers = [
         {
             id: 'bronze',
             name: 'Bronze',
-            icon: <FiAward className="text-amber-700" size={24} />,
+            icon: <FiAward className="text-amber-700" size={24}/>,
             pointsRequired: 0,
             color: 'from-amber-700 to-amber-600',
             benefits: [
-                { id: 'b1', text: 'Access to basic gadget catalog', icon: <FiGift size={16} /> },
-                { id: 'b2', text: 'Standard delivery options', icon: <FiTruck size={16} /> },
-                { id: 'b3', text: '5% discount on extended rentals', icon: <FiPercent size={16} /> },
-                { id: 'b4', text: 'Basic customer support', icon: <FiHeart size={16} /> }
+                {id: 'b1', text: 'Access to basic gadget catalog', icon: <FiGift size={16}/>},
+                {id: 'b2', text: 'Standard delivery options', icon: <FiTruck size={16}/>},
+                {id: 'b3', text: '5% discount on extended rentals', icon: <FiPercent size={16}/>},
+                {id: 'b4', text: 'Basic customer support', icon: <FiHeart size={16}/>}
             ]
         },
         {
             id: 'silver',
             name: 'Silver',
-            icon: <FiAward className="text-gray-400" size={24} />,
+            icon: <FiAward className="text-gray-400" size={24}/>,
             pointsRequired: 500,
             color: 'from-gray-400 to-gray-300',
             benefits: [
-                { id: 's1', text: 'All Bronze benefits', icon: <FiGift size={16} /> },
-                { id: 's2', text: 'Priority customer support', icon: <FiHeart size={16} /> },
-                { id: 's3', text: '10% discount on extended rentals', icon: <FiPercent size={16} /> },
-                { id: 's4', text: 'Free standard shipping', icon: <FiTruck size={16} /> },
-                { id: 's5', text: 'Access to premium gadget catalog', icon: <FiStar size={16} /> }
+                {id: 's1', text: 'All Bronze benefits', icon: <FiGift size={16}/>},
+                {id: 's2', text: 'Priority customer support', icon: <FiHeart size={16}/>},
+                {id: 's3', text: '10% discount on extended rentals', icon: <FiPercent size={16}/>},
+                {id: 's4', text: 'Free standard shipping', icon: <FiTruck size={16}/>},
+                {id: 's5', text: 'Access to premium gadget catalog', icon: <FiStar size={16}/>}
             ]
         },
         {
             id: 'gold',
             name: 'Gold',
-            icon: <FiAward className="text-amber-400" size={24} />,
+            icon: <FiAward className="text-amber-400" size={24}/>,
             pointsRequired: 1500,
             color: 'from-amber-400 to-amber-300',
             benefits: [
-                { id: 'g1', text: 'All Silver benefits', icon: <FiGift size={16} /> },
-                { id: 'g2', text: '15% discount on extended rentals', icon: <FiPercent size={16} /> },
-                { id: 'g3', text: 'Free expedited shipping', icon: <FiTruck size={16} /> },
-                { id: 'g4', text: 'Priority access to new gadgets', icon: <FiClock size={16} /> },
-                { id: 'g5', text: 'Dedicated customer support', icon: <FiHeart size={16} /> },
-                { id: 'g6', text: 'Free basic insurance on rentals', icon: <FiShield size={16} /> }
+                {id: 'g1', text: 'All Silver benefits', icon: <FiGift size={16}/>},
+                {id: 'g2', text: '15% discount on extended rentals', icon: <FiPercent size={16}/>},
+                {id: 'g3', text: 'Free expedited shipping', icon: <FiTruck size={16}/>},
+                {id: 'g4', text: 'Priority access to new gadgets', icon: <FiClock size={16}/>},
+                {id: 'g5', text: 'Dedicated customer support', icon: <FiHeart size={16}/>},
+                {id: 'g6', text: 'Free basic insurance on rentals', icon: <FiShield size={16}/>}
             ]
         },
         {
             id: 'platinum',
             name: 'Platinum',
-            icon: <FiAward className="text-purple-400" size={24} />,
+            icon: <FiAward className="text-purple-400" size={24}/>,
             pointsRequired: 5000,
             color: 'from-purple-500 to-indigo-500',
             benefits: [
-                { id: 'p1', text: 'All Gold benefits', icon: <FiGift size={16} /> },
-                { id: 'p2', text: '25% discount on extended rentals', icon: <FiPercent size={16} /> },
-                { id: 'p3', text: 'Free premium insurance on all rentals', icon: <FiShield size={16} /> },
-                { id: 'p4', text: 'Free overnight shipping', icon: <FiTruck size={16} /> },
-                { id: 'p5', text: 'VIP customer support', icon: <FiHeart size={16} /> },
-                { id: 'p6', text: 'Early access to limited edition gadgets', icon: <FiStar size={16} /> },
-                { id: 'p7', text: 'Exclusive member events and workshops', icon: <IoTicketOutline size={16} /> }
+                {id: 'p1', text: 'All Gold benefits', icon: <FiGift size={16}/>},
+                {id: 'p2', text: '25% discount on extended rentals', icon: <FiPercent size={16}/>},
+                {id: 'p3', text: 'Free premium insurance on all rentals', icon: <FiShield size={16}/>},
+                {id: 'p4', text: 'Free overnight shipping', icon: <FiTruck size={16}/>},
+                {id: 'p5', text: 'VIP customer support', icon: <FiHeart size={16}/>},
+                {id: 'p6', text: 'Early access to limited edition gadgets', icon: <FiStar size={16}/>},
+                {id: 'p7', text: 'Exclusive member events and workshops', icon: <IoTicketOutline size={16}/>}
             ]
         }
     ];
+
 
     // Rewards data
     const rewardsData = [
         {
             id: 'rental-discounts',
             name: 'Rental Discounts',
-            icon: <FiPercent className="text-green-500" size={24} />,
+            icon: <FiPercent className="text-green-500" size={24}/>,
             description: 'Redeem points for discounts on your next gadget rental. The more points you use, the bigger the discount!',
             redemptionOptions: [
-                { points: 200, value: '10% off your next rental' },
-                { points: 500, value: '25% off your next rental' },
-                { points: 1000, value: '50% off your next rental' },
-                { points: 2000, value: 'One free rental (up to $100 value)' }
+                {points: 200, value: '10% off your next rental'},
+                {points: 500, value: '25% off your next rental'},
+                {points: 1000, value: '50% off your next rental'},
+                {points: 2000, value: 'One free rental (up to $100 value)'}
             ]
         },
         {
             id: 'extended-rentals',
             name: 'Extended Rentals',
-            icon: <IoTimeOutline className="text-blue-500" size={24} />,
+            icon: <IoTimeOutline className="text-blue-500" size={24}/>,
             description: 'Use your points to extend your current rental period without additional charges.',
             redemptionOptions: [
-                { points: 300, value: '3 extra days on any rental' },
-                { points: 600, value: '1 extra week on any rental' },
-                { points: 1200, value: '2 extra weeks on any rental' }
+                {points: 300, value: '3 extra days on any rental'},
+                {points: 600, value: '1 extra week on any rental'},
+                {points: 1200, value: '2 extra weeks on any rental'}
             ]
         },
         {
             id: 'premium-upgrades',
             name: 'Premium Upgrades',
-            icon: <IoRocketOutline className="text-purple-500" size={24} />,
+            icon: <IoRocketOutline className="text-purple-500" size={24}/>,
             description: 'Upgrade your rental to a premium model or add premium accessories to your existing rental.',
             redemptionOptions: [
-                { points: 400, value: 'Upgrade to next model tier' },
-                { points: 700, value: 'Premium accessory package' },
-                { points: 1500, value: 'Ultra-premium model upgrade' }
+                {points: 400, value: 'Upgrade to next model tier'},
+                {points: 700, value: 'Premium accessory package'},
+                {points: 1500, value: 'Ultra-premium model upgrade'}
             ]
         },
         {
             id: 'insurance-coverage',
             name: 'Insurance Coverage',
-            icon: <FiShield className="text-red-500" size={24} />,
+            icon: <FiShield className="text-red-500" size={24}/>,
             description: 'Redeem points for insurance coverage on your rentals for peace of mind.',
             redemptionOptions: [
-                { points: 250, value: 'Basic damage protection' },
-                { points: 500, value: 'Standard insurance package' },
-                { points: 1000, value: 'Premium all-inclusive coverage' }
+                {points: 250, value: 'Basic damage protection'},
+                {points: 500, value: 'Standard insurance package'},
+                {points: 1000, value: 'Premium all-inclusive coverage'}
             ]
         },
         {
             id: 'exclusive-access',
             name: 'Exclusive Access',
-            icon: <IoTrophyOutline className="text-amber-500" size={24} />,
+            icon: <IoTrophyOutline className="text-amber-500" size={24}/>,
             description: 'Use points to gain early or exclusive access to limited edition and high-demand gadgets.',
             redemptionOptions: [
-                { points: 800, value: 'Early access to new releases' },
-                { points: 1500, value: 'Reservation for high-demand items' },
-                { points: 3000, value: 'Access to limited edition gadgets' }
+                {points: 800, value: 'Early access to new releases'},
+                {points: 1500, value: 'Reservation for high-demand items'},
+                {points: 3000, value: 'Access to limited edition gadgets'}
             ]
         },
         {
             id: 'gift-cards',
             name: 'Gift Cards',
-            icon: <IoWalletOutline className="text-pink-500" size={24} />,
+            icon: <IoWalletOutline className="text-pink-500" size={24}/>,
             description: 'Convert your loyalty points into gift cards for popular retailers and online stores.',
             redemptionOptions: [
-                { points: 1000, value: '$25 gift card' },
-                { points: 2000, value: '$50 gift card' },
-                { points: 4000, value: '$100 gift card' }
+                {points: 1000, value: '$25 gift card'},
+                {points: 2000, value: '$50 gift card'},
+                {points: 4000, value: '$100 gift card'}
             ]
         }
     ];
+
 
     // How to earn points data
     const earnPointsData = [
         {
             id: 'rentals',
             name: 'Complete Rentals',
-            icon: <FiGift className="text-indigo-500" size={24} />,
+            icon: <FiGift className="text-indigo-500" size={24}/>,
             description: 'Earn 10 points for every $1 spent on rentals',
             example: 'Rent a $100 gadget and earn 1,000 points'
         },
         {
             id: 'reviews',
             name: 'Write Reviews',
-            icon: <FiStar className="text-amber-500" size={24} />,
+            icon: <FiStar className="text-amber-500" size={24}/>,
             description: 'Earn 250 points for each verified review with photos',
             example: 'Review your rental experience with photos and earn 250 points'
         },
         {
             id: 'referrals',
             name: 'Refer Friends',
-            icon: <FiHeart className="text-pink-500" size={24} />,
+            icon: <FiHeart className="text-pink-500" size={24}/>,
             description: 'Earn 500 points when a referred friend completes their first rental',
             example: 'Refer 5 friends and earn 2,500 points'
         },
         {
             id: 'streak',
             name: 'Rental Streak',
-            icon: <IoSparklesOutline className="text-purple-500" size={24} />,
+            icon: <IoSparklesOutline className="text-purple-500" size={24}/>,
             description: 'Earn bonus points for consecutive monthly rentals',
             example: 'Rent for 3 consecutive months and earn a 1,000 point bonus'
         }
     ];
+
 
     // Handle tab change
     const handleTabChange = (tab) => {
@@ -221,15 +225,18 @@ const LoyaltyAndRewardsComponent = () => {
         setIsMenuOpen(false);
     };
 
+
     // Handle tier selection
     const handleTierSelect = (tierId) => {
         setActiveTier(tierId);
     };
 
+
     // Toggle mobile menu
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
 
     return (
         <div className={`w-full py-16 transition-colors duration-300 ${
@@ -237,8 +244,10 @@ const LoyaltyAndRewardsComponent = () => {
         }`}>
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden -z-10">
-                <div className="absolute top-0 -right-40 w-96 h-96 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-full blur-3xl"></div>
+                <div
+                    className="absolute top-0 -right-40 w-96 h-96 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
+                <div
+                    className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-full blur-3xl"></div>
             </div>
 
             <div className="container mx-auto px-4">
@@ -249,7 +258,7 @@ const LoyaltyAndRewardsComponent = () => {
                             ? 'bg-gray-800/70 text-cyan-300 border border-cyan-800/50'
                             : 'bg-white/80 text-indigo-700 border border-indigo-200/50'
                     } backdrop-blur-md`}>
-                        <FiAward className="mr-2" />
+                        <FiAward className="mr-2"/>
                         <span>Membership Program</span>
                     </div>
 
@@ -282,10 +291,10 @@ const LoyaltyAndRewardsComponent = () => {
                                         : 'text-gray-700 hover:text-indigo-700 hover:bg-indigo-50'
                             }`}
                         >
-              <span className="flex items-center">
-                <FiAward className="mr-2" />
-                Membership Tiers
-              </span>
+                            <span className="flex items-center">
+                                <FiAward className="mr-2"/>
+                                Membership Tiers
+                            </span>
                         </button>
 
                         <button
@@ -300,10 +309,10 @@ const LoyaltyAndRewardsComponent = () => {
                                         : 'text-gray-700 hover:text-indigo-700 hover:bg-indigo-50'
                             }`}
                         >
-              <span className="flex items-center">
-                <FiGift className="mr-2" />
-                Redeem Rewards
-              </span>
+                            <span className="flex items-center">
+                                <FiGift className="mr-2"/>
+                                Redeem Rewards
+                            </span>
                         </button>
 
                         <button
@@ -318,10 +327,10 @@ const LoyaltyAndRewardsComponent = () => {
                                         : 'text-gray-700 hover:text-indigo-700 hover:bg-indigo-50'
                             }`}
                         >
-              <span className="flex items-center">
-                <IoSparklesOutline className="mr-2" />
-                How to Earn Points
-              </span>
+                            <span className="flex items-center">
+                                <IoSparklesOutline className="mr-2"/>
+                                How to Earn Points
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -334,16 +343,16 @@ const LoyaltyAndRewardsComponent = () => {
                             darkMode ? 'bg-gray-800/70 text-white' : 'bg-white/90 text-gray-900 shadow-sm'
                         }`}
                     >
-            <span className="flex items-center">
-              {activeTab === 'tiers' && <FiAward className="mr-2" />}
-                {activeTab === 'rewards' && <FiGift className="mr-2" />}
-                {activeTab === 'earn' && <IoSparklesOutline className="mr-2" />}
+                        <span className="flex items-center">
+                            {activeTab === 'tiers' && <FiAward className="mr-2"/>}
+                            {activeTab === 'rewards' && <FiGift className="mr-2"/>}
+                            {activeTab === 'earn' && <IoSparklesOutline className="mr-2"/>}
 
-                {activeTab === 'tiers' && 'Membership Tiers'}
-                {activeTab === 'rewards' && 'Redeem Rewards'}
-                {activeTab === 'earn' && 'How to Earn Points'}
-            </span>
-                        {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+                            {activeTab === 'tiers' && 'Membership Tiers'}
+                            {activeTab === 'rewards' && 'Redeem Rewards'}
+                            {activeTab === 'earn' && 'How to Earn Points'}
+                        </span>
+                        {isMenuOpen ? <FiX size={20}/> : <FiMenu size={20}/>}
                     </button>
 
                     {isMenuOpen && (
@@ -362,7 +371,7 @@ const LoyaltyAndRewardsComponent = () => {
                                             : 'text-gray-700 hover:bg-indigo-50'
                                 }`}
                             >
-                                <FiAward className="mr-2" />
+                                <FiAward className="mr-2"/>
                                 Membership Tiers
                             </button>
 
@@ -378,7 +387,7 @@ const LoyaltyAndRewardsComponent = () => {
                                             : 'text-gray-700 hover:bg-indigo-50'
                                 }`}
                             >
-                                <FiGift className="mr-2" />
+                                <FiGift className="mr-2"/>
                                 Redeem Rewards
                             </button>
 
@@ -394,7 +403,7 @@ const LoyaltyAndRewardsComponent = () => {
                                             : 'text-gray-700 hover:bg-indigo-50'
                                 }`}
                             >
-                                <IoSparklesOutline className="mr-2" />
+                                <IoSparklesOutline className="mr-2"/>
                                 How to Earn Points
                             </button>
                         </div>
@@ -403,7 +412,7 @@ const LoyaltyAndRewardsComponent = () => {
 
                 {/* Membership Tiers Content */}
                 {activeTab === 'tiers' && (
-                    <div className="max-w-6xl mx-auto">
+                    <div className="w-11/12 mx-auto">
                         {/* Tier Selection - Desktop */}
                         <div className="hidden md:flex justify-center mb-8">
                             <div className={`inline-flex rounded-full p-1 ${
@@ -421,10 +430,10 @@ const LoyaltyAndRewardsComponent = () => {
                                                     : 'text-gray-700 hover:text-indigo-700 hover:bg-indigo-50'
                                         }`}
                                     >
-                    <span className="flex items-center">
-                      {tier.icon}
-                        <span className="ml-2">{tier.name}</span>
-                    </span>
+                                        <span className="flex items-center">
+                                            {tier.icon}
+                                            <span className="ml-2">{tier.name}</span>
+                                        </span>
                                     </button>
                                 ))}
                             </div>
@@ -447,10 +456,10 @@ const LoyaltyAndRewardsComponent = () => {
                                                     : 'text-gray-700 hover:text-indigo-700 hover:bg-indigo-50'
                                         }`}
                                     >
-                    <span className="flex items-center justify-center">
-                      {tier.icon}
-                        <span className="ml-2">{tier.name}</span>
-                    </span>
+                                        <span className="flex items-center justify-center">
+                                            {tier.icon}
+                                            <span className="ml-2">{tier.name}</span>
+                                        </span>
                                     </button>
                                 ))}
                             </div>
@@ -471,8 +480,9 @@ const LoyaltyAndRewardsComponent = () => {
                                     <div className={`bg-gradient-to-r ${tier.color} p-6 md:p-8 text-white`}>
                                         <div className="flex flex-col md:flex-row justify-between items-center">
                                             <div className="flex items-center mb-4 md:mb-0">
-                                                <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mr-4">
-                                                    {React.cloneElement(tier.icon, { size: 32, className: 'text-white' })}
+                                                <div
+                                                    className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                                    {React.cloneElement(tier.icon, {size: 32, className: 'text-white'})}
                                                 </div>
                                                 <div>
                                                     <h3 className="text-2xl md:text-3xl font-bold">{tier.name} Tier</h3>
@@ -513,16 +523,17 @@ const LoyaltyAndRewardsComponent = () => {
                                                             : 'bg-gray-50/80 border border-gray-200/50'
                                                     }`}
                                                 >
-                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-3 ${
-                                                        darkMode
-                                                            ? 'bg-gray-800 text-white'
-                                                            : 'bg-white text-indigo-600 shadow-sm'
-                                                    }`}>
+                                                    <div
+                                                        className={`w-8 h-8 rounded-full flex items-center justify-center mr-3 ${
+                                                            darkMode
+                                                                ? 'bg-gray-800 text-white'
+                                                                : 'bg-white text-indigo-600 shadow-sm'
+                                                        }`}>
                                                         {benefit.icon}
                                                     </div>
                                                     <span className={darkMode ? 'text-gray-200' : 'text-gray-700'}>
-                            {benefit.text}
-                          </span>
+                                                        {benefit.text}
+                                                    </span>
                                                 </div>
                                             ))}
                                         </div>
@@ -539,7 +550,7 @@ const LoyaltyAndRewardsComponent = () => {
                                                     }`}
                                                 >
                                                     <span>Upgrade to {tier.id === 'bronze' ? 'Silver' : tier.id === 'silver' ? 'Gold' : 'Platinum'}</span>
-                                                    <FiChevronRight className="ml-2" />
+                                                    <FiChevronRight className="ml-2"/>
                                                 </a>
                                             </div>
                                         )}
@@ -644,7 +655,7 @@ const LoyaltyAndRewardsComponent = () => {
 
                 {/* Rewards Content */}
                 {activeTab === 'rewards' && (
-                    <div className="max-w-6xl mx-auto">
+                    <div className="w-11/12 mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {rewardsData.map((reward) => (
                                 <div
@@ -657,11 +668,12 @@ const LoyaltyAndRewardsComponent = () => {
                                 >
                                     <div className="p-6">
                                         <div className="flex items-center mb-4">
-                                            <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
-                                                darkMode
-                                                    ? 'bg-gray-700'
-                                                    : 'bg-gray-100'
-                                            }`}>
+                                            <div
+                                                className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
+                                                    darkMode
+                                                        ? 'bg-gray-700'
+                                                        : 'bg-gray-100'
+                                                }`}>
                                                 {reward.icon}
                                             </div>
                                             <h3 className={`text-lg font-semibold ${
@@ -693,14 +705,15 @@ const LoyaltyAndRewardsComponent = () => {
                                                                 : 'bg-white hover:bg-gray-50'
                                                         }`}
                                                     >
-                            <span className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                              {option.value}
-                            </span>
+                                                        <span
+                                                            className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                                                            {option.value}
+                                                        </span>
                                                         <span className={`text-sm font-medium ${
                                                             darkMode ? 'text-purple-400' : 'text-indigo-600'
                                                         }`}>
-                              {option.points} pts
-                            </span>
+                                                            {option.points} pts
+                                                        </span>
                                                     </div>
                                                 ))}
                                             </div>
@@ -716,7 +729,7 @@ const LoyaltyAndRewardsComponent = () => {
                                                 }`}
                                             >
                                                 <span>Redeem Now</span>
-                                                <FiChevronRight className="ml-1" size={16} />
+                                                <FiChevronRight className="ml-1" size={16}/>
                                             </a>
                                         </div>
                                     </div>
@@ -773,7 +786,7 @@ const LoyaltyAndRewardsComponent = () => {
 
                 {/* How to Earn Points Content */}
                 {activeTab === 'earn' && (
-                    <div className="max-w-6xl mx-auto">
+                    <div className="w-11/12 mx-auto">
                         <div className={`rounded-2xl overflow-hidden mb-10 ${
                             darkMode
                                 ? 'bg-gray-800/50 backdrop-blur-md border border-gray-700/50'
@@ -797,11 +810,12 @@ const LoyaltyAndRewardsComponent = () => {
                                             }`}
                                         >
                                             <div className="flex items-start">
-                                                <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
-                                                    darkMode
-                                                        ? 'bg-gray-800'
-                                                        : 'bg-white shadow-sm'
-                                                }`}>
+                                                <div
+                                                    className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
+                                                        darkMode
+                                                            ? 'bg-gray-800'
+                                                            : 'bg-white shadow-sm'
+                                                    }`}>
                                                     {item.icon}
                                                 </div>
                                                 <div>
@@ -960,13 +974,14 @@ const LoyaltyAndRewardsComponent = () => {
                                         }`}>
                                             <div className="flex justify-between font-medium">
                                                 <span>Current Tier:</span>
-                                                <span className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Bronze</span>
+                                                <span
+                                                    className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Bronze</span>
                                             </div>
                                             <div className="flex justify-between font-medium mt-1">
                                                 <span>Next Tier:</span>
                                                 <span className={darkMode ? 'text-gray-300' : 'text-gray-700'}>
-                          Silver (500 pts)
-                        </span>
+                                                    Silver (500 pts)
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -977,7 +992,7 @@ const LoyaltyAndRewardsComponent = () => {
                 )}
 
                 {/* FAQ Section */}
-                <div className="max-w-4xl mx-auto mt-16">
+                {/*<div className="w-10/12 mx-auto mt-16">
                     <h3 className={`text-2xl font-bold mb-6 text-center ${
                         darkMode ? 'text-white' : 'text-gray-900'
                     }`}>
@@ -997,7 +1012,8 @@ const LoyaltyAndRewardsComponent = () => {
                                     How do I earn loyalty points?
                                 </h4>
                                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                                    You earn 10 points for every $1 spent on rentals. Additional points can be earned by writing reviews, referring friends, and maintaining a rental streak.
+                                    You earn 10 points for every $1 spent on rentals. Additional points can be earned by
+                                    writing reviews, referring friends, and maintaining a rental streak.
                                 </p>
                             </div>
 
@@ -1008,7 +1024,8 @@ const LoyaltyAndRewardsComponent = () => {
                                     When do my points expire?
                                 </h4>
                                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                                    Points are valid for 12 months from the date they are earned. Any activity on your account will extend all your points for another 12 months.
+                                    Points are valid for 12 months from the date they are earned. Any activity on your
+                                    account will extend all your points for another 12 months.
                                 </p>
                             </div>
 
@@ -1019,7 +1036,8 @@ const LoyaltyAndRewardsComponent = () => {
                                     How do I redeem my points?
                                 </h4>
                                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                                    You can redeem your points through your account dashboard. Select the reward you want to redeem and follow the instructions. Points will be deducted automatically.
+                                    You can redeem your points through your account dashboard. Select the reward you
+                                    want to redeem and follow the instructions. Points will be deducted automatically.
                                 </p>
                             </div>
 
@@ -1030,12 +1048,14 @@ const LoyaltyAndRewardsComponent = () => {
                                     How do I upgrade my membership tier?
                                 </h4>
                                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                                    Membership tiers are automatically upgraded when you reach the required points threshold. Silver requires 500 points, Gold requires 1,500 points, and Platinum requires 5,000 points.
+                                    Membership tiers are automatically upgraded when you reach the required points
+                                    threshold. Silver requires 500 points, Gold requires 1,500 points, and Platinum
+                                    requires 5,000 points.
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
     );
