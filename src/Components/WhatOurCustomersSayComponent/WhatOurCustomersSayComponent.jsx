@@ -102,7 +102,7 @@ const WhatOurCustomersSayComponent = () => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(() => {
                 goToNext();
-            }, 5000);
+            }, 3000);
         }
 
         return () => {
@@ -164,6 +164,7 @@ const WhatOurCustomersSayComponent = () => {
         <div className={`w-full py-16 transition-colors duration-300 ${
             darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
         }`}>
+
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden -z-10">
                 <div className="absolute top-0 -right-40 w-96 h-96 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
@@ -171,6 +172,7 @@ const WhatOurCustomersSayComponent = () => {
             </div>
 
             <div className="container mx-auto px-4">
+
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${
@@ -206,6 +208,7 @@ const WhatOurCustomersSayComponent = () => {
                             ? 'bg-gray-800/50 backdrop-blur-md border border-gray-700/50'
                             : 'bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-xl'
                     }`}>
+
                         {/* Decorative Elements */}
                         <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-full blur-3xl -z-10"></div>
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-full blur-3xl -z-10"></div>
@@ -218,6 +221,7 @@ const WhatOurCustomersSayComponent = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:p-8">
+
                             {/* Customer Avatar - Mobile View Top, Desktop View Left */}
                             <div className="flex flex-col items-center md:items-start">
                                 <div className="relative mb-4">
@@ -279,7 +283,7 @@ const WhatOurCustomersSayComponent = () => {
                             {/* Testimonial Content */}
                             <div className="md:col-span-2 flex flex-col justify-between">
                                 <div>
-                                    <div className={`text-lg md:text-xl leading-relaxed mb-6 ${
+                                    <div className={`text-sm md:text-base leading-relaxed mt-20 mb-8 text-justify ${
                                         darkMode ? 'text-gray-300' : 'text-gray-700'
                                     }`}>
                                         "{testimonials[activeIndex].review}"
@@ -322,6 +326,7 @@ const WhatOurCustomersSayComponent = () => {
 
                                 {/* Navigation Controls */}
                                 <div className="flex justify-between items-center mt-4">
+
                                     {/* Indicators */}
                                     <div className="flex space-x-2">
                                         {testimonials.map((_, index) => (
