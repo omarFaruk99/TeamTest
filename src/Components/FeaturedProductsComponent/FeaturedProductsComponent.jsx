@@ -17,10 +17,15 @@ import {
     IoGlassesOutline,
     IoAirplaneOutline
 } from 'react-icons/io5';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const FeaturedProductsComponent = () => {
-    const [darkMode, setDarkMode] = useState(true);
+
+    // const [darkMode, setDarkMode] = useState(true);
+    const {darkMode} = useTheme();
+
+
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [displayedGadgets, setDisplayedGadgets] = useState([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -511,7 +516,7 @@ const FeaturedProductsComponent = () => {
             </div>
 
             {/* Animation Keyframes */}
-            <style jsx global>{`
+            <style>{`
                 @keyframes pulse-slow {
                     0% {
                         opacity: 0.4;
@@ -528,6 +533,7 @@ const FeaturedProductsComponent = () => {
                     animation: pulse-slow 4s ease-in-out infinite;
                 }
             `}</style>
+
         </div>
     );
 };

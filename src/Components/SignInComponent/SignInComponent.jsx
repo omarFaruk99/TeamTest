@@ -3,12 +3,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiEye, FiEyeOff, FiMail, FiLock, FiLogIn } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
 import { IoWarningOutline } from 'react-icons/io5';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const SignInComponent = () => {
 
     const navigate = useNavigate();
-    const [darkMode, setDarkMode] = useState(true);
+
+
+    // const [darkMode, setDarkMode] = useState(true);
+    const {darkMode} = useTheme();
 
 
     // Form state

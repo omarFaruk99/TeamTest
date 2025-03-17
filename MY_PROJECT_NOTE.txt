@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "FeaturedProductsComponent design prototype is completed."
+git commit -m "Toggling between Dark/Light theme feature implemented successfully."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------

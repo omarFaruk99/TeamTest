@@ -1,17 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {FiMenu, FiX, FiMoon, FiSun, FiUser} from 'react-icons/fi';
 import {Link} from 'react-router-dom';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const NavbarComponent = () => {
 
+    // const [darkMode, setDarkMode] = useState(false);
+    const {darkMode, toggleDarkMode} = useTheme();
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(true);
 
 
     // Sample user data - in a real app, this would come from auth context or props
     const user = {
-        isLoggedIn: true,
+        isLoggedIn: false,
         name: "John Doe",
         email: "john@example.com",
         profilePicture: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -20,17 +24,6 @@ const NavbarComponent = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        // In a real app, you might want to add a class to the document body or use localStorage
-        if (!darkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
     };
 
 

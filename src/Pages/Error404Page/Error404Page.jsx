@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiHome, FiWifi, FiAlertTriangle } from 'react-icons/fi';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const Error404Page = () => {
 
-    const [darkMode, setDarkMode] = useState(true);
+    // const [darkMode, setDarkMode] = useState(true);
+    const {darkMode} = useTheme();
 
 
     const handleGoBack = () => {
@@ -171,7 +173,7 @@ const Error404Page = () => {
             </div>
 
             {/* Add animation keyframes to the global style */}
-            <style jsx global>{`
+            <style>{`
                 @keyframes spin-slow {
                     from {
                         transform: translate(-50%, -50%) rotate(0deg);

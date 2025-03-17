@@ -19,11 +19,15 @@ import {
     IoTabletLandscape,
     IoSparkles
 } from 'react-icons/io5';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const BannerComponent = () => {
 
-    const [darkMode, setDarkMode] = useState(true);
+    // const [darkMode, setDarkMode] = useState(true);
+    const {darkMode} = useTheme();
+
+
     const [searchQuery, setSearchQuery] = useState('');
     const [activeGadget, setActiveGadget] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
@@ -62,7 +66,7 @@ const BannerComponent = () => {
     };
 
 
-    const categories = [
+    /*const categories = [
         { name: 'Smartphones', icon: <FiSmartphone size={20} /> },
         { name: 'Laptops', icon: <IoLaptop size={20} /> },
         { name: 'Cameras', icon: <FiCamera size={20} /> },
@@ -71,7 +75,7 @@ const BannerComponent = () => {
         { name: 'Wearables', icon: <FiWatch size={20} /> },
         { name: 'VR', icon: <FiMonitor size={20} /> },
         { name: 'Drones', icon: <FiWifi size={20} /> },
-    ];
+    ];*/
 
 
     const featuredGadgets = [

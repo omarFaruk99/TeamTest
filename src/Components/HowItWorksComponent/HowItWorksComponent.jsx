@@ -13,11 +13,15 @@ import {
     FiPause
 } from 'react-icons/fi';
 import {IoSparkles, IoFlash, IoRocket, IoShieldCheckmark} from 'react-icons/io5';
+import useTheme from "../../CustomHooks/useTheme.jsx";
 
 
 const HowItWorksComponent = () => {
 
-    const [darkMode, setDarkMode] = useState(true);
+    // const [darkMode, setDarkMode] = useState(true);
+    const {darkMode} = useTheme();
+
+
     const [activeStep, setActiveStep] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -646,7 +650,7 @@ const HowItWorksComponent = () => {
             </div>
 
             {/* Add animation keyframes to the global style */}
-            <style jsx global>{`
+            <style>{`
                 @keyframes spin-slow {
                     from {
                         transform: translate(-50%, -50%) rotate(0deg);
