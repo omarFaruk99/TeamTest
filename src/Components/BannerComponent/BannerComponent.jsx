@@ -389,7 +389,7 @@ const BannerComponent = () => {
                     </div>
 
                     {/* Category Pills */}
-                    <div className="mt-12 relative z-10">
+                    {/*<div className="mt-12 relative z-10">
                         <div className={`flex items-center justify-center flex-wrap gap-3 py-4 px-6 rounded-2xl mx-auto max-w-4xl ${
                             darkMode
                                 ? 'bg-gray-800/70 border border-purple-900/30 backdrop-blur-md'
@@ -412,7 +412,7 @@ const BannerComponent = () => {
                                 </Link>
                             ))}
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>

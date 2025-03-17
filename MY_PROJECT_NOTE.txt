@@ -10,7 +10,7 @@ git push -u origin main
 // Commands to push code from now on.-----------------------------------------------------------------------------------
 
 git add .
-git commit -m "HowItWorksComponent design prototype is completed."
+git commit -m "FeaturedProductsComponent design prototype is completed."
 git push
 
 // Necessary Git commands.----------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ Now got to your forked repository,
 
 
 
-
+smartphone, laptop camera, gaming, audio, wearables, VR, Drone
 
 
 

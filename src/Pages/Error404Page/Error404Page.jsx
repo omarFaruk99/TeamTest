@@ -5,7 +5,7 @@ import { FiArrowLeft, FiHome, FiWifi, FiAlertTriangle } from 'react-icons/fi';
 
 const Error404Page = () => {
 
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
 
     const handleGoBack = () => {
