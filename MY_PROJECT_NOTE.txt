@@ -56,10 +56,10 @@ Now got to your forked repository,
 
 
 
-smartphone, laptop camera, gaming, audio, wearables, VR, Drone
-Smartphones, Laptops, Tablets, Smartwatches, Cameras, Gaming Consoles, Audio Devices, Headphones, Speakers, Wearable Devices, Virtual Reality (VR) Devices, Drones, Projectors
-
+SmartphonesSpecificationSubComponent, LaptopsSpecificationSubComponent, TabletsSpecificationSubComponent, SmartwatchesSpecificationSubComponent, CamerasSpecificationSubComponent, GamingSpecificationSubComponent, AudioSpecificationSubComponent, HeadphonesSpecificationSubComponent, SpeakersSpecificationSubComponent, WearablesSpecificationSubComponent, VRSpecificationSubComponent, DronesSpecificationSubComponent, ProjectorsSpecificationSubComponent
 Smartphones, Laptops, Tablets, Smartwatches, Cameras, Gaming, Audio, Headphones, Speakers, Wearables, VR, Drones, Projectors
+Categories: Smartphones, Laptops, Tablets, Smartwatches, Cameras, Gaming, Audio, Headphones, Speakers, Wearables, VR, Drones, Projectors
+
 
 ok eitai final korlam. akhon ekta boro JSON data banaba, tar moddhe ei category gula array akare diba, abar prottek category er moddhe, mone koro Smartphones category er moddhe
 

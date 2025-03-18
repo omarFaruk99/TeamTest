@@ -59,10 +59,11 @@ const AllGadgetsComponent = () => {
         { name: "Gaming", icon: <FaGamepad className="mr-2 text-indigo-500" /> },
         { name: "Audio", icon: <FaVolumeUp className="mr-2 text-yellow-500" /> },
         { name: "Headphones", icon: <FaHeadphones className="mr-2 text-cyan-500" /> },
+        { name: "Speakers", icon: <FaVolumeUp className="mr-2 text-blue-500" /> },
+        { name: "Wearables", icon: <FaWifi className="mr-2 text-lime-500" /> },
         { name: "VR", icon: <FaVrCardboard className="mr-2 text-orange-500" /> },
         { name: "Drones", icon: <FaPlane className="mr-2 text-teal-500" /> },
         { name: "Projectors", icon: <FaProjectDiagram className="mr-2 text-amber-500" /> },
-        { name: "Wearables", icon: <FaWifi className="mr-2 text-lime-500" /> },
     ]
 
 
@@ -1315,7 +1316,7 @@ const AllGadgetsComponent = () => {
                 setIsLoading(false)
             }, 1500)
         }
-        fetchGadgets()
+        fetchGadgets().then()
     }, [])
 
 
@@ -1775,7 +1776,7 @@ const AllGadgetsComponent = () => {
                     </p>
 
                     {/* Sort Dropdown - Desktop */}
-                    <div className="hidden lg:flex items-center gap-2">
+                    {/*<div className="hidden lg:flex items-center gap-2">
                         <span className={`transition-colors ${darkMode ? "text-gray-300" : "text-gray-600"}`}>Sort by:</span>
                         <div className="relative z-10">
                             <select
@@ -1800,7 +1801,7 @@ const AllGadgetsComponent = () => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
 
                 {/* No Results Message */}

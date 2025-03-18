@@ -1,0 +1,70 @@
+{
+  "gadgets": {
+    "gadget123": {
+      "id": "gadget123",
+      "name": "iPhone 15 Pro Max",
+      "category": "Smartphones",
+      "subcategory": "iOS",
+      "brand": "Apple",
+      "model": "A2849",
+      "description": "Latest Apple iPhone with A17 Pro chip and 48MP camera system.",
+      "specifications": {
+        "display": "6.7-inch Super Retina XDR",
+        "processor": "A17 Pro",
+        "storage": "256GB",
+        "camera": "48MP main, 12MP ultrawide, 12MP telephoto",
+        "battery": "4,422 mAh",
+        "os": "iOS 17"
+      },
+      "condition": "Excellent",
+      "included": [
+        "Charging cable",
+        "Protective case"
+      ],
+      "images": [
+        "/images/gadgets/iphone15pro_1.jpg",
+        "/images/gadgets/iphone15pro_2.jpg"
+      ],
+      "pricing": {
+        "perDay": 24.99,
+        "deposit": 200.00,
+        "insuranceFee": 5.99
+      },
+      "availability": {
+        "status": "available",
+        "blockedDates": [
+          "2023-12-24",
+          "2023-12-25"
+        ]
+      },
+      "reviews": [
+        "review789",
+        "review101"
+      ],
+      "averageRating": 4.9,
+      "totalRentals": 28
+    }
+  },
+  "reviews": {
+    "review123": {
+      "id": "review123",
+      "rentalId": "rental123",
+      "gadgetId": "gadget123",
+      "reviewerId": "user123",
+      "receiverId": "user456",
+      "type": "gadget",
+      "rating": 5,
+      "title": "Excellent iPhone, perfect condition",
+      "comment": "The iPhone was in perfect condition and worked flawlessly during my trip. Battery life was amazing!",
+      "date": "2023-10-11T09:00:00Z",
+      "helpful": 12,
+      "response": {
+        "comment": "Thank you for the great review! You're welcome to rent again anytime.",
+        "date": "2023-10-11T10:30:00Z"
+      },
+      "photos": [
+        "/images/reviews/review123_1.jpg"
+      ]
+    }
+  }
+}
