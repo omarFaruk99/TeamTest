@@ -3,6 +3,7 @@ import BannerComponent from "../../Components/BannerComponent/BannerComponent.js
 import FeaturedProductsComponent from "../../Components/FeaturedProductsComponent/FeaturedProductsComponent.jsx";
 import HowItWorksComponent from "../../Components/HowItWorksComponent/HowItWorksComponent.jsx";
 import LoyaltyAndRewardsComponent from "../../Components/LoyaltyAndRewardsComponent/LoyaltyAndRewardsComponent.jsx";
+import FAQComponent from "../../Components/FAQComponent/FAQComponent.jsx";
 import WhatOurCustomersSayComponent from "../../Components/WhatOurCustomersSayComponent/WhatOurCustomersSayComponent.jsx";
 
 

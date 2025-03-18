@@ -992,7 +992,7 @@ const LoyaltyAndRewardsComponent = () => {
                 )}
 
                 {/* FAQ Section */}
-                {/*<div className="w-10/12 mx-auto mt-16">
+                <div className="w-10/12 mx-auto mt-16">
                     <h3 className={`text-2xl font-bold mb-6 text-center ${
                         darkMode ? 'text-white' : 'text-gray-900'
                     }`}>
@@ -1055,7 +1055,7 @@ const LoyaltyAndRewardsComponent = () => {
                             </div>
                         </div>
                     </div>
-                </div>*/}
+                </div>
             </div>
         </div>
     );
