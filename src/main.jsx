@@ -12,6 +12,7 @@ import SignInPage from "./Pages/SignInPage/SignInPage.jsx";
 import Error404 from "./Pages/Error404Page/Error404Page.jsx";
 import AuthProvider from "./Providers/AuthProvider.jsx";
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import AllGadgetsPage from "./Pages/AllGadgetsPage/AllGadgetsPage.jsx";
 
 
 const queryClient = new QueryClient()
@@ -29,6 +30,7 @@ ReactDOM.createRoot(root).render(
                         <Route path={'/'} element={<MainLayout></MainLayout>}>
                             <Route path={'/'} element={<HomePage></HomePage>}></Route>
                             <Route path={'/about'} element={<AboutPage></AboutPage>}></Route>
+                            <Route path={'/all-gadgets'} element={<AllGadgetsPage></AllGadgetsPage>}></Route>
                             <Route path={'/contact-us'} element={<ContactUsPage></ContactUsPage>}></Route>
                             <Route path={'/faq'} element={<FAQPage></FAQPage>}></Route>
                             <Route path={'/sign-up'} element={<SignUpPage></SignUpPage>}></Route>

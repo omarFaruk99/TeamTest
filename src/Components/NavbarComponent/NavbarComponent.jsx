@@ -98,8 +98,8 @@ const NavbarComponent = () => {
 
     const navButtons = [
         {name: 'Home', path: '/', isScroll: true, scrollToTop: true},
-        {name: 'Gadgets', path: '/all-gadgets', hideWhenLoggedIn: false},
         {name: 'How It Works', path: '#how-it-works', hideWhenLoggedIn: false, isScroll: true},
+        {name: 'Gadgets', path: '/all-gadgets', hideWhenLoggedIn: false},
         {name: 'Contact Us', path: '/contact-us', hideWhenLoggedIn: false},
         {name: 'FAQ', path: '/faq', hideWhenLoggedIn: false},
         {name: 'Sign Up', path: '/sign-up', hideWhenLoggedIn: true},
