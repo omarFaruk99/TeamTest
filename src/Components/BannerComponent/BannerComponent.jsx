@@ -118,7 +118,7 @@ const BannerComponent = () => {
 
 
     return (
-        <div className={`w-full overflow-hidden transition-all duration-300 ${
+        <div className={`pt-20 w-full overflow-hidden transition-all duration-300 ${
             darkMode
                 ? 'bg-gray-900 text-white'
                 : 'bg-white text-gray-900'

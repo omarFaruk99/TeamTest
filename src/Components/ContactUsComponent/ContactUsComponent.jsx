@@ -292,8 +292,16 @@ const ContactUsComponent = () => {
     };
 
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            // behavior: 'smooth'
+        });
+    }, []);
+
+
     return (
-        <div className={`min-h-[calc(100vh-493px)] w-full py-16 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+        <div className={`min-h-[calc(100vh-421px)] w-full py-16 pt-32 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden -z-10">
                 <div className="absolute top-0 -right-40 w-96 h-96 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-full blur-3xl"></div>

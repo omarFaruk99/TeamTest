@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {FiEye, FiEyeOff, FiUser, FiMail, FiLock, FiCheck} from 'react-icons/fi';
 import {FcGoogle} from 'react-icons/fc';
@@ -202,9 +202,17 @@ const SignUpComponent = () => {
     };
 
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            // behavior: 'smooth'
+        });
+    }, []);
+
+
     return (
         <div
-            className={`min-h-[calc(100vh-493px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+            className={`min-h-[calc(100vh-421px)] flex items-center justify-center py-12 pt-32 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
                 darkMode ? 'bg-gray-900' : 'bg-gray-50'
             }`}>
             <div className={`max-w-xl w-full space-y-8 relative ${

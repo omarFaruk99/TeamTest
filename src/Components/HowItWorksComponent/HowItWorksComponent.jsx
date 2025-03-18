@@ -169,7 +169,7 @@ const HowItWorksComponent = () => {
 
 
     return (
-        <div className={`py-32 transition-colors duration-500 relative overflow-hidden ${
+        <div id={'how-it-works'} className={`py-32 transition-colors duration-500 relative overflow-hidden ${
             darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
         }`}>
 

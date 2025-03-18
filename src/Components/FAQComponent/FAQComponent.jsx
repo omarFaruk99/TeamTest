@@ -215,8 +215,16 @@ const FAQComponent = () => {
     };
 
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            // behavior: 'smooth'
+        });
+    }, []);
+
+
     return (
-        <div className={`min-h-[calc(100vh-493px)] w-full py-16 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+        <div className={`min-h-[calc(100vh-421px)] w-full py-16 pt-32 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
