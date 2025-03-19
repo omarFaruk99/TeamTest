@@ -1,9 +1,11 @@
 import React from 'react';
+import AboutUsComponent from "../../Components/AboutUsComponent/AboutUsComponent.jsx";
+
 
 const AboutPage = () => {
     return (
         <div>
-            AboutPage
+            <AboutUsComponent></AboutUsComponent>
         </div>
     );
 };

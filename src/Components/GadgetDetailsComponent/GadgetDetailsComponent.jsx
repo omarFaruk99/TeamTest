@@ -247,6 +247,14 @@ const GadgetDetailsComponent = () => {
     )
 
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            // behavior: 'smooth'
+        });
+    }, []);
+
+
     // If loading, show skeleton
     if (loading) {
         return renderSkeleton()

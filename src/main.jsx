@@ -30,7 +30,7 @@ ReactDOM.createRoot(root).render(
                     <Routes>
                         <Route path={'/'} element={<MainLayout></MainLayout>}>
                             <Route path={'/'} element={<HomePage></HomePage>}></Route>
-                            <Route path={'/about'} element={<AboutPage></AboutPage>}></Route>
+                            <Route path={'/about-us'} element={<AboutPage></AboutPage>}></Route>
                             <Route path={'/all-gadgets'} element={<AllGadgetsPage></AllGadgetsPage>}></Route>
                             <Route path={'/all-gadgets/gadget-details/:id'} element={<GadgetDetailsPage></GadgetDetailsPage>}></Route>
                             <Route path={'/contact-us'} element={<ContactUsPage></ContactUsPage>}></Route>
