@@ -32,7 +32,7 @@ ReactDOM.createRoot(root).render(
                             <Route path={'/'} element={<HomePage></HomePage>}></Route>
                             <Route path={'/about'} element={<AboutPage></AboutPage>}></Route>
                             <Route path={'/all-gadgets'} element={<AllGadgetsPage></AllGadgetsPage>}></Route>
-                            <Route path={'/all-gadgets/gadget-details-:id'} element={<GadgetDetailsPage></GadgetDetailsPage>}></Route>
+                            <Route path={'/all-gadgets/gadget-details/:id'} element={<GadgetDetailsPage></GadgetDetailsPage>}></Route>
                             <Route path={'/contact-us'} element={<ContactUsPage></ContactUsPage>}></Route>
                             <Route path={'/faq'} element={<FAQPage></FAQPage>}></Route>
                             <Route path={'/sign-up'} element={<SignUpPage></SignUpPage>}></Route>

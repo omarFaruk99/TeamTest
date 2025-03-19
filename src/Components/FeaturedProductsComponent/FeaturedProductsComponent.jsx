@@ -324,7 +324,7 @@ const FeaturedProductsComponent = () => {
 
     // Handle gadget card click
     const handleGadgetClick = (gadgetId) => {
-        navigate(`/all-gadgets/gadget-details-${gadgetId}`);
+        navigate(`/all-gadgets/gadget-details/${gadgetId}`);
     };
 
 
